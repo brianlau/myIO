@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,8 @@ public class myIO {
 
 			List<String> text = new ArrayList<String>();
 			List<String> revText = new ArrayList<String>();
-			String l,m,n;
+			List<String> revEvery = new ArrayList<String>();
+			String l;
 			while ((l = inputStream.readLine()) != null) {
 				text.add(l);
 			}
@@ -33,6 +35,9 @@ public class myIO {
 					rev = rev + letter;
 				}
 				revText.add(rev.toString());
+			}
+			for (int i = revText.size() -1; i >= 0; i-- ){
+				revEvery.add(revText.get(i));
 			}
 //			while ((m = inputStream.readLine()) != null){
 //				for(int i = m.length()-1; i >= 0; i--){
